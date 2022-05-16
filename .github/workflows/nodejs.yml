@@ -2,6 +2,7 @@ name: build and deploy
 on:
   push:
     branches: [main]
+    
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +15,6 @@ jobs:
           node-version: "12.x"
       - name: Install dependencies
         run: npm install
-      - name: Run test
       
   deploy:
     name: Deploy to EC2 on master
